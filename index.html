@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+#slidebar{
+    background-color: darkcyan;
+    /* width: 30vh; */
+    height: 100vh;
+    position: fixed;
+    left: -30%;
+
+}
+
+        .header{
+            display: block;
+            display: flex;
+            background-color: lawngreen;
+            align-items: center;
+            justify-content:space-between;
+        }
+      
+        #search  {
+            /* margin-left: 450px; */
+            margin-left: 100px;
+            font-size: large;
+            padding:5px 10px ;
+        }
+        #button1{
+            border: 4px solid salmon;
+            height: 18px;
+            width: 20px;
+            display: flex;
+            flex-direction:row;
+            
+            /* display: inline-block; */
+        }
+        #button1 span{
+            width: 6px;
+            height: 6px;
+            background-color: black;
+            /* display:inline-block; */
+            border-bottom: 3px solid white;
+        }
+        #slidebar.active{
+            left: 0%;
+             transition: all 0.3s ease 0.3ms;
+ 
+             /* transition: 0.3s ease-in-out 0.3s; */
+             /* transition: cubic-bezier(0.25, 0.46, 0.45, 0.94); */
+             /* transition: cubic-bezier(1, 0, 0, 1); */
+        }
+        #slidebar a  {
+            font-size: xx-large;
+            /* padding: 6vh; */
+        font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        #slidebar li{
+            padding: 20px;
+            border-bottom: 3px solid rebeccapurple;
+        }
+        #slidebar li button{
+            background-color:darkcyan;
+            border: none;
+            cursor: pointer;
+        }
+        #slidebar a:hover {
+            /* font-family: f; */
+            color: rgb(41, 11, 139);
+        }
+        #img-me{
+            border-radius: 50%;
+            background-position: center;
+        }
+        #cap-me{
+            font-weight: bold;
+            color: lightgray;
+            /* text-align: center; */
+            /* float: right; */
+        }
+        .personal{
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            cursor: pointer;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="header">
+            <div class="logo"><img id="logo1" src="https://pixabay.com/illustrations/halloween-haunted-house-graveyard-5880068/" alt="logo" width="80px" height="80px" loading="slow"></div>
+            <div id="button1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+             
+            </div>
+            <!-- <div class="search"><button>search</button></div> -->
+            <label for="search"><input type="search" name="Search" id="search"  placeholder="Search"></label>
+            <span><button><a href="#">Log out</a></button</span>
+        </section>
+        <section id="slidebar">
+            <div class="personal">
+
+                <img id="img-me" src="/cropped-IMG_20221014_115938__2_-removebg-preview.png" alt="human" height="80px" width="80px">
+                <p id="cap-me">@Sushil_pandey9</p>
+            </div>
+                <ul>
+                <br>
+                <hr>
+                <li><button><a href="#">Home</a></button></li>
+                <li><button><a href="#">Services</a></button></li>
+                <li><button><a href="#">Blog</a></button></li>
+                <li><button><a href="#">Contact</a></button></li>
+                <li><button><a href="#">Projects</a></button></li>
+                <li><button><a href="#">Portfolio</a></button></li>
+
+            </ul>
+        </section>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script>
+button1.addEventListener("click",function(){
+    console.log("hello");
+document.getElementById("slidebar").classList.toggle("active");
+})
+</script>
+
+</html>
